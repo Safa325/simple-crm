@@ -1,0 +1,21 @@
+.dialog-container{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+
+
+.dialog-content{
+    height: auto;
+    padding: 8px 24px !important ;
+}
+
+mat-progress-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}

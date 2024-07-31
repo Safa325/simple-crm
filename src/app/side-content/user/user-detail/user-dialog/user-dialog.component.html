@@ -1,0 +1,52 @@
+<div class="dialog-container">
+    <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+      <h2 mat-dialog-title>Edit User</h2>
+  <mat-dialog-content class="dialog-content">
+    <div>
+      <mat-form-field class="mr-16" appearance="outline">
+        <mat-label>First name</mat-label>
+        <input [disabled]="loading" [(ngModel)]="user.firstName" matInput >
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Last name</mat-label>
+        <input [disabled]="loading" [(ngModel)]="user.lastName" matInput placeholder="Smith">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>E-Mail</mat-label>
+        <input type="email" [disabled]="loading" [(ngModel)]="user.email" matInput placeholder="abc@abc.com">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Birth date</mat-label>
+        <input [disabled]="loading" [(ngModel)]="user.birthDate" matInput placeholder="MM/DD/YYYY" [matDatepicker]="picker" >
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Address</mat-label>
+          <input [disabled]="loading" [(ngModel)]="user.address" matInput placeholder="Streetname + Number">
+        </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" class="mr-16">
+          <mat-label>Zip code</mat-label>
+          <input [disabled]="loading" [(ngModel)]="user.zipCode" matInput placeholder="8000" type="number">
+        </mat-form-field>
+      <mat-form-field appearance="outline">
+          <mat-label>City</mat-label>
+          <input [disabled]="loading" [(ngModel)]="user.city" matInput placeholder="City name">
+        </mat-form-field>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button [disabled]="loading" (click)="dialogRef.close()"  mat-button>Cancel</button>
+    <button [disabled]="loading" (click)="updateUser()" mat-button cdkFocusInitial>Save User</button>
+  </mat-dialog-actions>
+  
+  </div>
+  

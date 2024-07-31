@@ -1,0 +1,38 @@
+<mat-card appearance="outlined">
+     <button class="menu" mat-icon-button [matMenuTriggerFor]="menu" > 
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="openUserDialog()"><mat-icon>edit_note</mat-icon> Edit</button>
+      </mat-menu>
+    <mat-card-title>
+        Profile
+    </mat-card-title>
+    
+   
+    <mat-card-content>
+        <img src="assets/img/user.png" alt="ProfilImg">
+        <div class="info">
+            <div class="name">
+                <h3>
+                    {{user?.firstName}}
+                    {{user?.lastName}}
+                </h3>
+            </div>
+            <div class="birthdate">
+                {{formattedBirthDate}}
+            </div>
+            <div class="email">
+                <a href="mailto:{{user?.email}}">{{user?.email}}</a>
+            </div>
+            <div class="address">
+                 {{user?.address}}
+            </div>
+            <div class="city">
+                {{user?.zipCode}}
+                {{user?.city}}
+            </div>
+
+        </div>
+    </mat-card-content>
+</mat-card>

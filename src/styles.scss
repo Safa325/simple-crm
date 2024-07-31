@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    box-sizing: border-box;
+}
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.mr-16 {
+    margin-right: 16px;
+}
+
+.full-width{
+    width: 100%;
+}
+
+app-user{
+    width: 100%;
+}
+
+app-user-detail{
+    width: 100%;
+}

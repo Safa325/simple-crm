@@ -1,0 +1,54 @@
+mat-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 300px;
+    background-color: rgba($color: #5c32f3, $alpha: 0.6);
+    padding: 16px;
+
+    img{
+        height: 200px;
+        width: auto;
+    }
+}
+
+mat-card-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: auto;
+    width: 100%;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    width: 50%;
+    h3{
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+
+.email{
+    a{
+        text-decoration: none;
+        color: black;
+        &:hover{
+            text-decoration: underline;
+            
+        }
+    }
+}
+
+.menu{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
